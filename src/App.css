@@ -75,7 +75,7 @@ input{
   /* background-color: aqua; */
 }
 #weather{
-  .weather{
+  
     padding: 15px;
     width: 100%;
     height: auto;
@@ -91,7 +91,7 @@ input{
     }
     
     /* background-color: aqua; */
-  }
+  
 }
 .image{
   width: 40%;

@@ -11,18 +11,18 @@ function Weather() {
            fetch(`http://api.weatherapi.com/v1/current.json?key=dc52c5a6478c47ad977103351242711&q=${city}&aqi=no`)
            .then((response) => response.json())
            .then((weather) => {setInputWeather(weather)
-           console.log(weather)}
-        )
-        document.querySelector("#weather").innerHTML = `
-         <div className="image">
-        <img src=${inputWeather?.current?.condition?.icon}  alt="" />
-        </div>
-        <div className="data">
-        <h2>${inputWeather?.location?.name} </h2>
-          <p>${inputWeather?.location?.country}</p>
-          <p>${inputWeather?.current?.temp_c}°C</p>
-        </div>
-        `
+           console.log(weather)
+           document.querySelector("#weather").innerHTML = `
+           <div className="image">
+           <img src=${inputWeather?.current?.condition?.icon}  alt="" />
+           </div>
+           <div className="data">
+           <h2>${inputWeather?.location?.name} </h2>
+           <p>${inputWeather?.location?.country}</p>
+           <p>${inputWeather?.current?.temp_c}°C</p>
+           </div>
+           `}
+           )
         
      }
 
@@ -37,9 +37,13 @@ function Weather() {
         
         <button onClick={getData} type="submit">Get Weather</button>
     <div id='weather'>
-       
+       <div className="image">
+
+       </div>
           
-          
+          <div className="data">
+            
+          </div>
          
         </div>
     </div>
